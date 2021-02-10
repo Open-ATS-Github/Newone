@@ -7,9 +7,9 @@
 	#########################################
 	
 	The guide is split in three parts:
-		1. 	setup the controlling (steerring, motor acceleration)
-		2.	setup the videostream
-		3. 	setup tmux and automation
+		1. 	Setup the controlling (steering, motor acceleration)
+		2.	Setup the videostream
+		3. 	Setup tmux and automation
 		
 	General:
 	
@@ -20,25 +20,25 @@
 	ctr = controlling, vid = videostream
 	
 	#########################################
-	#        1. SETUP CONTROLING            #
+	#        1. SETUP CONTROLLING           #
 	#########################################
 	
-	To control the vehicle with a gamepad install pygame on your Laptop/PC with the comand
+	To control the vehicle with a gamepad install pygame on your Laptop/PC with the command
 	
 		pip install pygame
 		
 	open the control-program (lap-ctr.py), do some stering with your gamepad, 
 	if you see some data sending you did it right.
 	
-	Next go to your server, copy the controlling server programm on your server
-	and start the programm by writing:
+	Next, connect to your server via SSH, copy the controlling server program on your server
+	and start the program by writing:
 		
 		python3 srv-ctr.py
 		
-	Again stere with your gamepad if you see the data ariving 
+	Again stere with your gamepad if you see the data arriving 
 	on the server you did it again right
 	
-	Now log on to your Raspberry Pi, all you need to do is start the program here, write:
+	Now log on to your Raspberry Pi and run the following command:
 	
 		python3 rpi-ctr.py
 	
@@ -52,13 +52,12 @@
 		sudo apt update
 		sudo apt install python3-opencv 
 		
-	you also need it on your laptop to output the videostream
+	you also need it on your laptop to output the video stream
 	for that go to the Opencv.org webpage.
 	
 	Now log in to your Raspberry Pi and copy the program on to your Pi
 	All you need to do is start the program here. it could take up to 20 sec to start, 
 	If you see a stream of "image send" you did it right.
-	of corse the camera has to be conected
 	
 		python3 rpi-vid.py
 	
@@ -67,30 +66,24 @@
 		python3 srv-vid.py
 		
 	and the video stream program on your laptop/pc.
-	by klick on "lap-vid.py"
+	by click on "lap-vid.py"
 	
 
 	#########################################
 	#    3. SETUP TMUX and AUTOAMATION      #
 	#########################################
 	
-	You need Tmux so your Python programms can work simultaniosly and in the background.
-	Install Tmux on your Pi and server with the command:
+	You need tmux so your Python programs can run simultaneously and in the background.
+	Install tmux on your Pi and server with the command:
 	
 		sudo apt install tmux
 		
-	With "Strg+c" you can close your programs like normaly
-	With "Strg+d" you can close a tmux session 
+	With "Ctrl+C" you can close your programs like normally
+	With "Ctrl+D" you can close a tmux session 
 	
-	We wrote start programms for the raspberry, the server and the laptop/pc
-	It will autmaticly open tmux, split the sreen 
-	and starts the controlling and videostream programs.
+	We wrote start programs for the raspberry, the server and the laptop/pc
+	It will automatically open tmux, split the sreen 
+	and start the controlling and videostream programs.
 	
-	Just copy the start programm to the folder where the other programms are and start it.
-	
-	
-	
-
-
-		
+	Just copy the start program to the folder where the other programs are and start it.
 	
