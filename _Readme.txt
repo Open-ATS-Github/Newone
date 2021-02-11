@@ -81,7 +81,7 @@
 	With "Ctrl+C" you can close your programs like normally
 	With "Ctrl+D" you can close a tmux session 
 	
-	We wrote start programs for the raspberry, the server and the laptop/pc
+	We wrote start programs for the Raspberry Pi, the server and the laptop/pc
 	It will automatically open tmux, split the sreen 
 	and start the controlling and videostream programs.
 	
