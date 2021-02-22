@@ -1,2 +1,0 @@
-import os     #importing os library to communicate with the system
-os.system ("""tmux new-session -d -s ctr \; send-keys "python3 /root/srv-ctr.py" Enter \; split-window -h \; send-keys "python3 /root/srv-vid.py" Enter \; a""") 
