@@ -1,0 +1,2 @@
+import time,os#importing os library so as to communicate with the system
+os.system("""tmux new-session -d -s ctr \; send-keys "python3 /home/pi/ctr-grs.py" Enter \; split-window -h \; send-keys "python3 /home/pi/vid-grs.py" Enter \; a""")
