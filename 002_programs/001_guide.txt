@@ -1,0 +1,133 @@
+	
+	#########################################
+	#           SETUP GUIDE                 #
+	#         www.Open-ATS.eu               #
+	#########################################
+	
+	Hey, I'm glad you made it here!
+	Here you can find all the programs to make your vehicle controlled over internet.
+	There are two programs, one is for controlling the steering motors and the drive motors
+	and the other program is responsible for transmitting video data over internet.
+	
+	We are a talented group of free volunteers who are working hard
+	to make this project available for everyone. If you find this helpful 
+	consider donating or mention us if you implement the project into your own one.
+	
+	The guide is split into parts:
+		1. 	Setup controlling (steering, drive)
+		2.	Setup video stream
+		3. 	Setup tmux and automation
+		4.	Troubleshooting
+		5.  Advanced stuff
+	
+	General:
+	
+	First of all, you need Python on the Laptop/PC, on the Server and on the Raspberry.
+	We tested everything on Raspberry Pi OS with desktop (release date: January 11th 2021).
+	Only Raspbian with desktop works, cause open-cv has problems with the other versions.
+	On this version Python is preinstalled. 
+	Same goes for the Server OS, if you use Debian 10, Python is pre-installed too.
+	
+	You need to change to your own IP of your server on all programs.
+	Just open the programs with a text editor and change to your own IP.
+	
+	The program names stand for: vhc = vehicle, grs = ground station, srv = server
+	ctr = controlling, vid = videostream
+	
+	#########################################
+	#        1. SETUP CONTROLLING           #
+	#########################################
+	
+	To control the vehicle with a gamepad, install pygame on your Laptop/PC by typing into the cmd:
+	
+		pip3 install pygame
+	
+	open the control-program (ctr-grs.py), do some steering with your gamepad,
+	if you see some data sending, you did it right.
+	
+	Next, connect to your server via SSH, copy the server program on your server
+	and start the program by writing:
+	
+		python3 srv.py
+	
+	if you see a message with 'new login'
+	on the server you did it right again.
+	
+	Now log on to your Raspberry Pi and run the following command 
+	to start the controlling program:
+	
+		python3 ctr-vhc.py
+		
+	steer with your gamepad, if you see the servo motors turning you are 
+	done and you can start driving your vehicle.
+	
+	#########################################
+	#       2. SETUP VIDEOSTREAM            #
+	#########################################
+	
+	Install OpenCV on your Laptop/PC, for that type in your cmd:
+	
+		pip install opencv-python
+		
+	You need to enable the camera on your Raspberry Pi:
+	
+		sudo raspi-config
+		
+	Go to Interface Options --> Camera --> enable
+	To check if the camera is working, type:
+	
+		raspistill -o image.jpg
+	
+	In addition, you need python3-opencv on your Raspberry Pi as well to get video input, 
+	for this type in these two commands on your Raspberry Pi:
+	
+		sudo apt update
+		sudo apt install python3-opencv -y
+		
+	You also need it on your laptop to output the video stream
+	for that go to the webpage and download it there:
+	
+		opencv.org/releases
+	
+	Now log in to your Raspberry Pi and copy the program on to your RPi
+	All you need to do is start the program here. It could take up to 20 sec to start, 
+	If you see a stream of "image sent" you did it right.
+	
+		python3 vid-vhc.py
+		
+	finaly start the video stream program on your laptop/pc.
+	
+	#########################################
+	#    3. SETUP TMUX and AUTOAMATION      #
+	#########################################
+	
+	You need tmux so your Python programs can run simultaneously and in the background.
+	Install tmux on your Pi and server with the command:
+	
+		sudo apt install tmux -y
+		
+	With "Ctrl+C" you can close your programs like normally.
+	With "Ctrl+D" you can close a tmux session.
+	
+	We wrote start programs for the raspberry, and the laptop/pc
+	It will automatically open tmux, split the screen 
+	and start the controlling and video stream programs.
+	
+	Just copy the start programs to the folder where the other programs are and start theme there.
+	
+	#########################################
+	#    4. TROUBLESHOOTING                 #
+	#########################################
+	
+	Open the programs with a standard text editor here you can find to every code line a comment. 
+	This is the most effective way to solve problems. 
+	Read the FAQs (www.open-ats.eu/faq) it will answer some questions too. 
+
+	#########################################
+	#    5. ADVANCED STUFF					#
+	#########################################
+
+	we created shell scrips to speed up the hole instalion process
+	, look at the advanced folder. They aren't documented jet.
+
+	Text maintained by Lukas Pfitscher (lukaspfitscher@open-ats.eu)
