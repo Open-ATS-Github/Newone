@@ -3,7 +3,7 @@
 	#########################################
 	#                                       #
 	#           SETUP GUIDE                 #
-	#		  www.Open-ATS.eu				#
+	#		  www.Open-ATS.eu	#
 	#                                       #
 	#########################################
 	
@@ -92,7 +92,7 @@
 	Just copy the start program to the folder where the other programs are and start them.
 	
 	#########################################
-	#    4. TROUBLESHOOTING					#
+	#    4. TROUBLESHOOTING			#
 	#########################################
 	
 	Open the programs with a standard text editor here you can find to every code line a commend. 
