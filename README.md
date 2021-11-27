@@ -15,7 +15,7 @@ programes
 - insertable springs on all axis
 - assembly with M3 screws and threaded brass inserts
 
-electrinics
+electronics
 - two individual servomotors to steer the two front wheels
 - two brushless motor directly integrated into the rear wheels 
 - raspberry pi
