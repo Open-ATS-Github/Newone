@@ -3,7 +3,7 @@ Newone is a open-source, 3D printed, low cost transport vehicle controlled over 
 
 
 Features
-- udp program for controlling motors and video stream (easy to understand)
+- udp program for controlling motors and video stream over internet (not secure but easy to understand)
 - opencv for future AI 
 
 - 3D prined ball bearing (printable in one peace)
