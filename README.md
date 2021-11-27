@@ -2,9 +2,9 @@
 Newone is a open-source, 3D printed, low cost transport vehicle controlled over cellular network and programed in Python
 
 
-Features
+Features:
 
-Programming
+programes
 - programs wiriten in python
 - udp program for controlling motors and video stream over internet (not secure but easy to understand)
 - opencv for future AI 
