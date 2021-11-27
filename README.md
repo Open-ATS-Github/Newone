@@ -11,8 +11,9 @@ Features
 - insertable springs on all axis
 - assembly with M3 screws and threaded brass insets
 
-- two individual servomotors to steer the two front wheels
-- two brushless motor directly integrated into the rear wheels 
-- raspberry pi
-- BLHeli32 ESC
-- 18650 cells with BMS (25.2V)
+test
+  - two individual servomotors to steer the two front wheels
+  - two brushless motor directly integrated into the rear wheels 
+  - raspberry pi
+  - BLHeli32 ESC
+  - 18650 cells with BMS (25.2V)
