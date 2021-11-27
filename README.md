@@ -3,17 +3,21 @@ Newone is a open-source, 3D printed, low cost transport vehicle controlled over 
 
 
 Features
+
+Programming
+- programs wiriten in python
 - udp program for controlling motors and video stream over internet (not secure but easy to understand)
 - opencv for future AI 
 
+3d printing
 - 3D prined ball bearing (printable in one peace without any support)
 - Filaflex 82A flexible tires (airless)
 - insertable springs on all axis
 - assembly with M3 screws and threaded brass insets
 
-test
-  - two individual servomotors to steer the two front wheels
-  - two brushless motor directly integrated into the rear wheels 
-  - raspberry pi
-  - BLHeli32 ESC
-  - 18650 cells with BMS (25.2V)
+electrinics
+- two individual servomotors to steer the two front wheels
+- two brushless motor directly integrated into the rear wheels 
+- raspberry pi
+- BLHeli32 ESC
+- 18650 cells with BMS (25.2V)
