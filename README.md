@@ -6,7 +6,7 @@ Features
 - udp program for controlling motors and video stream over internet (not secure but easy to understand)
 - opencv for future AI 
 
-- 3D prined ball bearing (printable in one peace)
+- 3D prined ball bearing (printable in one peace without any support)
 - Filaflex 82A flexible tires (airless)
 - insertable springs on all axis
 - assembly with M3 screws and threaded brass insets
@@ -16,5 +16,3 @@ Features
 - raspberry pi
 - BLHeli32 ESC
 - 18650 cells with BMS (25.2V)
-
-
