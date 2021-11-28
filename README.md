@@ -7,7 +7,7 @@ Features:
 programes
 - programs written in python
 - udp program for controlling motors and video stream over internet (not secure but easy to understand)
-- opencv for future AI 
+- opencv for taking video and displaying them, good for future AI 
 
 3d printing
 - 3D printed ball bearing (printable in one piece without any support)
