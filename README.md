@@ -11,7 +11,7 @@ programes
 
 3d printing
 - 3D printed ball bearing (printable in one piece without any support)
-- Filaflex 82A flexible tires (airless)
+- filaflex 82A flexible tires (airless)
 - insertable springs on all axis
 - assembly with M3 screws and threaded brass inserts
 
@@ -19,5 +19,5 @@ electronics
 - two individual servomotors to steer the two front wheels
 - two brushless motor directly integrated into the rear wheels 
 - raspberry pi
-- BLHeli32 ESC
+- blheli32 ESC
 - 18650 cells with BMS (25.2V)
