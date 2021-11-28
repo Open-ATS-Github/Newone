@@ -13,7 +13,7 @@ programes
 - 3D printed ball bearing (printable in one piece without any support)
 - filaflex 82A flexible tires (airless)
 - insertable springs on all axis
-- assembly with M3 screws and threaded brass inserts
+- assembly with ONLY M3 screws and threaded brass inserts
 
 electronics
 - two individual servomotors to steer the two front wheels
