@@ -10,14 +10,15 @@ programes
 - opencv for taking video and displaying them, good for future AI 
 
 3d printing
-- 3D printed ball bearing (printable in one piece without any support)
-- filaflex 82A flexible tires (airless)
-- insertable springs on all axis
+- whole car 3D printable
+  - 3D printed ball bearing (printable in one piece without any support)
+  - 3D printed filaflex 82A flexible tires (airless)
+- insertable metal springs on all axis
 - assembly with only M3 screws and threaded brass inserts
 
 electronics
-- two individual servomotors to steer the two front wheels
-- two brushless motors directly integrated into the rear wheels 
+- two individual servomotors to steer the front wheels
+- two individual brushless motors directly integrated into the rear wheels 
 - raspberry pi
 - blheli32 ESC
 - 18650 cells with BMS (25.2V)
