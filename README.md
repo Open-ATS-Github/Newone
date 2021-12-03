@@ -13,6 +13,7 @@ programs
 - whole car 3D-printable
   - 3D-printed ball bearing (printable in one piece without any support)
   - 3D-printed filaflex 82A flexible tires (airless)
+- support structures are rarely required
 - insertable metal springs on all axis
 - assembly with only M3-screws and threaded brass inserts
 
@@ -21,4 +22,4 @@ electronics
 - two individual brushless motors directly integrated into the rear wheels 
 - raspberry pi
 - blheli32 ESC
-- 18650 cells with BMS (25.2V)
+- 18650 cells with BMS (25.2V7
