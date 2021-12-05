@@ -124,7 +124,7 @@
 	Read the FAQs (www.open-ats.eu/faq) it will answer some questions too. 
 
 	#########################################
-	#    5. ADVANCED STUFF					#
+	#    5. ADVANCED STUFF			#
 	#########################################
 
 	we created shell scrips to speed up the hole instalion process
