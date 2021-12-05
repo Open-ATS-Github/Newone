@@ -1,6 +1,7 @@
 # Newone www.Open-ATS.eu
 Newone is a open-source, 3D-printed, low-cost transport vehicle controlled over cellular network and programed in Python
 
+<img src="https://open-ats.eu/____impro/1/onewebmedia/untitled.jpg?etag=%2246d98-61a22cd2%22&sourceContentType=image%2Fjpeg&ignoreAspectRatio&resize=470%2B265&extract=73%2B25%2B361%2B217&quality=85">
 
 features:
 
