@@ -26,4 +26,4 @@
 - two individual brushless motors directly integrated into the rear wheels 
 - raspberry pi
 - blheli32 ESC
-- 18650 cells with BMS (25.2V7
+- 18650 cells with BMS (25.2V)
