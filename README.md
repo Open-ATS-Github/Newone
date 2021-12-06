@@ -7,7 +7,7 @@
 ## features:
 #### programs
 - open-source software, all programs written in python
-- program for controlling motors over internet
+- program for controlling motors (PWM) over internet
 - program for video stream over internet (not secure but easy to understand)
 - programs using udp for low latency
 - opencv for taking video and displaying them, good for future AI 
