@@ -17,7 +17,7 @@
 #### 3d printing
 - open-source hardware, hole car 3D-printable
   - 3D-printed ball bearing (printable in one piece without any support)
-  - 3D-printed filaflex 82A flexible tires (airless)
+  - 3D-printed flexible tires (airless, filaflex 82A)
 - support structures are rarely required
 - insertable metal springs on all axis
 - assembly with only M3-screws and threaded brass inserts
