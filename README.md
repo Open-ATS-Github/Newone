@@ -26,5 +26,5 @@
 - two individual servomotors to steer the front wheels
 - two individual brushless motors directly integrated into the rear wheels 
 - raspberry pi
-- blheli32 ESC
+- blheli32 ESC's
 - 18650 cells with BMS (25.2V)
