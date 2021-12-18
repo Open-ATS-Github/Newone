@@ -24,6 +24,7 @@
 #### electronics
 - two individual servomotors to steer the front wheels
 - two individual brushless motors directly integrated into the rear wheels 
+  (inwheel, hubmotor)
 - raspberry pi
 - blheli32 ESC's
 - 18650 cells with BMS (25.2V)
