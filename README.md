@@ -12,8 +12,7 @@
 (not secure but easy to understand)
 - programs using udp for low latency
 - opencv for taking video and displaying them, good for future AI 
-- all programs can as well be used for standard rc-cars, airplanes or boats 
-  with small changes and even for stationary surveillance cameras.
+- all programs can as well be used for standard rc-cars, airplanes or boats <br /> with small changes and even for stationary surveillance cameras.
 
 #### 3d printing
 - open-source hardware, hole car 3D-printable
