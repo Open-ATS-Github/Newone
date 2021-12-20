@@ -5,7 +5,7 @@
 
 ## features:
 #### programs
-- programs for controlling the car over the internet
+- programs for access the vehicle over the internet
   - program for controlling motors (PWM)
   - program for videostreaming
 - open-source software, all programs written in python
