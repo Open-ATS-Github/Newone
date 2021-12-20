@@ -29,3 +29,5 @@
 - raspberry pi
 - blheli32 ESC's
 - 18650 cells with BMS (25.2V)
+
+low cost, low part count
