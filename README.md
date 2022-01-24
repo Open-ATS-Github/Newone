@@ -28,5 +28,5 @@
   (inwheel, hubmotor)
 - raspberry pi
 - blheli32 ESC's
-- 18650 cells with BMS (25.2V)
+- 18650 cells with bms (25.2V)
 - low cost
