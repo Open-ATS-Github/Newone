@@ -30,3 +30,7 @@
 - blheli32 ESC's
 - 18650 cells with bms (25.2V)
 - low cost
+- 
+#### disadvantages
+- low torque cause of directdrive hub motor and  sensorless ESC
+ (will increase with planetary gear and currentsensing ESC)
