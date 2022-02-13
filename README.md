@@ -35,6 +35,5 @@
 - low torque cause of directdrive hub motor and  sensorless ESC
  (will increase with planetary gear and currentsensing ESC)
  
- 
-&nbsp;&nbsp;&nbsp;<br /><br /><br />
+<br /><br />
 contact: info@open-ats.eu
