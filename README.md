@@ -36,7 +36,5 @@
  (will increase with planetary gear and currentsensing ESC)
  
  
-&nbsp
-&nbsp
-&nbsp
+&nbsp;&nbsp;&nbsp;
 contact: info@open-ats.eu
