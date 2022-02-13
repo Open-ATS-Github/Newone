@@ -32,8 +32,8 @@
 - low cost
 
 #### disadvantages
-- low torque cause of directdrive hub motor and  sensorless ESC
- (will increase with planetary gear and currentsensing ESC)
+- low torque cause of directdrive hub motor (will increase with planetary gear)
+- low torque cause of sensorless ESC (will increase with currentsensing ESC)
  
 <br /><br />
 contact: info@open-ats.eu
