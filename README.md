@@ -41,13 +41,14 @@
 - low torque cause of sensorless ESC (will increase with currentsensing ESC)
 - video stream consumes too much data
 
-some code examples:
-
-
+## some code examples:
+#### take and show webcam/rpi-camera image
 ```
+import cv2
+cap = cv2.VideoCapture(0)
 img = cap.read()[1] # capturing image
-git add
-git commit
+cv2.imshow('stream',img) # 1st argument = windows name
+cv2.waitKey(1)
 ```
  
 <br /><br />
