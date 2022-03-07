@@ -41,7 +41,7 @@
 - low torque cause of sensorless ESC (will increase with currentsensing ESC)
 - video stream consumes too much data
 
-## some code examples:
+## some example codes:
 #### take and show webcam/rpi-camera image
 ```
 import cv2
@@ -50,6 +50,23 @@ img = cap.read()[1] # capturing image
 cv2.imshow('stream',img) # 1st argument = windows name
 cv2.waitKey(1)
 ```
- 
+#### write to rpi gpio pins (gpio 15, pwm=1500ms)
+```
+import os; os.system('sudo pigpiod /f >nul 2>&1')#starting GPIO deamon; suppress command line output
+time.sleep(1) #starting pigpiod takes a sec
+import pigpio #importing gpio library 
+output = pigpio.pi().set_servo_pulsewidth # just shorting that long name
+output(15,1500)#drive motor, right in drive direction
+```
+#### send something to the server
+```
+import socket
+address_server	=('your ip here',3274)
+soc = socket.socket(family = socket.AF_INET, type = socket.SOCK_DGRAM) # internet protocol parameters
+soc.sendto(b'',address_server)#before something can be received, something must be sent! (otherwise an error appears)
+soc.sendto(b'your message',address_server)
+```
+
+
 <br /><br />
 contact: info@open-ats.eu
