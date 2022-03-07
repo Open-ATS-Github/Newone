@@ -40,6 +40,10 @@
 - low torque cause of directdrive hub motor (will increase with planetary gear)
 - low torque cause of sensorless ESC (will increase with currentsensing ESC)
 - video stream consumes too much data
+## get started just write the following: (for detailed info see [readme])
+```
+python3 main.py
+```
 
 ## some example codes:
 #### take and show webcam/rpi-camera image
