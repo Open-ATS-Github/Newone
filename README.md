@@ -40,6 +40,15 @@
 - low torque cause of directdrive hub motor (will increase with planetary gear)
 - low torque cause of sensorless ESC (will increase with currentsensing ESC)
 - video stream consumes too much data
+
+some code examples:
+
+
+```
+img = cap.read()[1] # capturing image
+git add
+git commit
+```
  
 <br /><br />
 contact: info@open-ats.eu
