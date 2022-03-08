@@ -56,7 +56,7 @@ cv2.waitKey(1)
 ```
 #### write to rpi gpio pins (gpio 15, pwm=1500ms)
 ```
-import os; os.system('sudo pigpiod /f >nul 2>&1') #starting GPIO deamon; suppress command line output
+import time, os; os.system('sudo pigpiod /f >nul 2>&1') #starting GPIO deamon; suppress command line output
 time.sleep(1) #starting pigpiod takes a sec
 import pigpio #importing gpio library 
 output = pigpio.pi().set_servo_pulsewidth #just shorting that long name
