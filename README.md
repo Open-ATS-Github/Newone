@@ -70,7 +70,5 @@ soc = socket.socket(family = socket.AF_INET, type = socket.SOCK_DGRAM) #internet
 soc.sendto(b'',address_server) #before something can be received, something must be sent! (otherwise an error appears)
 soc.sendto(b'your message',address_server)
 ```
-
-
 <br /><br />
 contact: info@open-ats.eu
