@@ -13,8 +13,7 @@
 - programs for access the vehicle over the internet 
   - program for controlling motors
   - program for videostreaming
-- open-source software, all programs written in python
-(not secure but easy to understand)
+- open-source software, all programs written in python (focus on easy to understand)
 - programs using udp for low latency
 - opencv for taking video and displaying them, good for future AI 
 - all programs can as well be used for standard rc-cars, airplanes or boats <br /> with PWM input and even for stationary surveillance cameras.
