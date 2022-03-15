@@ -70,4 +70,4 @@ soc.sendto(b'',address_server) #before something can be received, something must
 soc.sendto(b'your message',address_server)
 ```
 <br />
-contact: info@open-ats.eu
+feel free to contact for any problem: info@open-ats.eu
