@@ -55,7 +55,7 @@ cv2.waitKey(1)
 ```
 #### write to rpi gpio pins (gpio 15, pwm=1500ms)
 ```
-#GPIO deamon first: sudo pigpiod
+#start GPIO deamon first: sudo pigpiod (preinstalled on RPI)
 import pigpio #importing gpio library 
 output = pigpio.pi().set_servo_pulsewidth #just shorting that long name
 output(15,1500)#gpio 15, pwm=1500ms
@@ -69,5 +69,5 @@ soc.sendto(b'',address_server) #before something can be received, something must
 soc.sendto(b'your message',address_server)
 ```
 <br />
-feel free to contact for any problem: info@open-ats.eu
-donate if you like: open-ats.eu/donate.html
+feel free to contact for any problem: info@open-ats.eu <br />
+donate if you like: www.open-ats.eu/donate.html
