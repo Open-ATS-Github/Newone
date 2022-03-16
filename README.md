@@ -44,7 +44,7 @@
 python3 main.py
 ```
 
-## some example codes:
+## example code:
 #### take and show webcam/rpi-camera image
 ```
 import cv2
