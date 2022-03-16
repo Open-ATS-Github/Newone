@@ -68,6 +68,7 @@ soc = socket.socket(family = socket.AF_INET, type = socket.SOCK_DGRAM) #internet
 soc.sendto(b'your message',address_server)
 ```
 <br />
-<img src="https://www.open-ats.eu/3dfiles/print.jpg">
 feel free to contact for any problem: info@open-ats.eu <br />
 donate: www.open-ats.eu/donate.html
+
+<img src="https://www.open-ats.eu/3dfiles/print.jpg">
