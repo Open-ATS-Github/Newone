@@ -65,7 +65,6 @@ output(15,1500)#gpio 15, pwm=1500ms
 import socket
 address_server	=('your ip here',3274)
 soc = socket.socket(family = socket.AF_INET, type = socket.SOCK_DGRAM) #internet protocol parameters
-soc.sendto(b'',address_server) #before something can be received, something must be sent! (otherwise an error appears)
 soc.sendto(b'your message',address_server)
 ```
 <br />
