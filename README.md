@@ -55,8 +55,7 @@ cv2.waitKey(1)
 ```
 #### write to rpi gpio pins (gpio 15, pwm=1500ms)
 ```
-import time, os; os.system('sudo pigpiod /f >nul 2>&1') #starting GPIO deamon; suppress command line output
-time.sleep(1) #starting pigpiod takes a sec
+#GPIO deamon first: sudo pigpiod
 import pigpio #importing gpio library 
 output = pigpio.pi().set_servo_pulsewidth #just shorting that long name
 output(15,1500)#gpio 15, pwm=1500ms
@@ -71,3 +70,4 @@ soc.sendto(b'your message',address_server)
 ```
 <br />
 feel free to contact for any problem: info@open-ats.eu
+donate if you like: open-ats.eu/donate.html
