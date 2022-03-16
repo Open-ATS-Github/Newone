@@ -70,4 +70,4 @@ soc.sendto(b'your message',address_server)
 ```
 <br />
 feel free to contact for any problem: info@open-ats.eu <br />
-donate if you like: www.open-ats.eu/donate.html
+donate: www.open-ats.eu/donate.html
