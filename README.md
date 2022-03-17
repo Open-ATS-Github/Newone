@@ -67,6 +67,7 @@ address_server	=('your ip here',3274)
 soc = socket.socket(family = socket.AF_INET, type = socket.SOCK_DGRAM) #internet protocol parameters
 soc.sendto(b'your message',address_server)
 ```
+
 <br />
 feel free to contact for any problem: info@open-ats.eu, also consider [donating](https://www.open-ats.eu/donate.html) or get a 
 [videocall with our experts (20$/hour)](https://www.open-ats.eu/contact.html)
