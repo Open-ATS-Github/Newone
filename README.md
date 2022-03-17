@@ -71,6 +71,6 @@ soc.sendto(b'your message',address_server)
 feel free to contact for any problem: info@open-ats.eu <br />
 
 
-also consider [donate](https://www.open-ats.eu/donate.html) or get a 
+also consider [donating](https://www.open-ats.eu/donate.html) or get a 
 [videocall with our experts (20$/hour)](https://www.open-ats.eu/contact.html)
 <img src="https://www.open-ats.eu/3dfiles/print.jpg">
