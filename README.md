@@ -70,4 +70,4 @@ soc.sendto(b'your message',address_server)
 <img src="https://www.open-ats.eu/3dfiles/print.jpg">
 
 feel free to contact for any problem: info@open-ats.eu, also consider [donating](https://www.open-ats.eu/donate.html) or get a 
-[videocall with me (20$/hour)](https://www.open-ats.eu/contact.html)
+[videocall (20$/hour)](https://www.open-ats.eu/contact.html)
