@@ -31,7 +31,7 @@
 - two individual brushless motors directly integrated into the rear wheels 
   (inwheel, hubmotor)
 - raspberry pi
-- blheli32 ESC's
+- blheli32 ESC's (will soon change to B-G431B-ESC1)
 - 18650 li-ion cells with bms (25.2V)
 - low cost
 
