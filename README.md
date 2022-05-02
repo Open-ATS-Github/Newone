@@ -60,7 +60,7 @@ import pigpio #importing gpio library
 output = pigpio.pi().set_servo_pulsewidth #just shorting that long name
 output(15,1500)#gpio 15, pwm=1500ms
 ```
-#### send something to the server
+#### send data to the server
 ```
 import socket
 address_server	=('your ip here',3274)
