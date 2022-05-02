@@ -53,7 +53,7 @@ img = cap.read()[1] #capturing image
 cv2.imshow('stream',img) #1st argument = windows name
 cv2.waitKey(1)
 ```
-#### write to rpi gpio pins (pin 15, pwm=1500ms)
+#### control motor with rpi (pin 15, pwm=1500ms)
 ```
 #start GPIO deamon first: sudo pigpiod (preinstalled on RPI)
 import pigpio #importing gpio library 
