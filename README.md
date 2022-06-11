@@ -19,7 +19,7 @@
 - all programs can as well be used for standard rc-cars, airplanes or boats <br /> with PWM input and even for stationary surveillance cameras.
 
 #### 3d printing
-- open-source hardware, hole car 3D-printable
+- open-source hardware, hole vehicle 3D-printable
   - 3D-printed ball bearing (printable in one piece without any support)
   - 3D-printed flexible tires (airless, filaflex 82A)
 - insertable metal springs on all axis
