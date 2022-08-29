@@ -10,7 +10,7 @@
 
 ## features:
 #### programs
-- programs for access the vehicle over the internet 
+- programs for access the vehicle over movile internet 
   - program for controlling motors
   - program for videostreaming
 - open-source software, all programs written in python (focus on easy to understand)
