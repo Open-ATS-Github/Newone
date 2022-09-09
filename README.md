@@ -1,6 +1,5 @@
 # www.open-ats.eu
-## 3D printed ground vehicle controlled over mobile internet 
-## for observation / transportation / development
+## 3D printed ground vehicle controlled over mobile internet for observation / transportation / development
 
 <img src="https://www.open-ats.eu/linking/github.png">
 
