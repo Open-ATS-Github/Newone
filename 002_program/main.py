@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-########################################################
-#   short description of the individual subprograms    #
-########################################################
+#this is a program in a single file for controlling a vehicle over mobile internet (videostream and controlling motors)#
+
+
+###short description of the individual subprograms###
 
 #controlling ground station: reads the input of the joystick and sends it to the vehicle through the server
 #continuously send "keep alive" to make the vehicle stop when disconnected
