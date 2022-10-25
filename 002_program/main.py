@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-#this is a program in a single file for controlling a vehicle over mobile internet (videostream and controlling motors)
-#there are actually 3 programs in one single file for the groundstation, server and vehicle
+#this is a program for controlling a vehicle over mobile internet (videostream and controlling motors)
+#there are actually 3 programs in this single file for the groundstation, server and vehicle
 
 
 ###short description of the individual subprograms
