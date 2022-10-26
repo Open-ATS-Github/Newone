@@ -5,6 +5,7 @@
 
 [Demo video](https://www.youtube.com/watch?v=fuw2pRNdg8U) &nbsp;&nbsp;&nbsp;
 [Documentation](https://www.open-ats.eu/documentation.html) &nbsp;&nbsp;&nbsp;
+[Discord](https://discord.com/channels/995806628077109268/995806628639158344)
 [3D-Model vehicle](https://www.open-ats.eu/3dmodel_main.html) &nbsp;&nbsp;&nbsp;
 [3D-Model electronics](https://www.open-ats.eu/3dmodel_elec.html) &nbsp;&nbsp;&nbsp;
 [3D-Model print](https://www.open-ats.eu/3dmodel_print.html)
