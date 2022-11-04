@@ -12,7 +12,7 @@
 
 ## features:
 #### programs
-- programs for access the vehicle over movile internet 
+- programs for access the vehicle over mobile internet 
   - program for controlling motors
   - program for videostreaming
 - open-source software, all programs written in python (focus on easy to understand)
@@ -24,7 +24,7 @@
 - open-source hardware, hole vehicle 3D-printable
   - 3D-printed ball bearing (printable in one piece without any support)
   - 3D-printed flexible tires (airless, filaflex 82A)
-- insertable metal springs on all axis
+- insertable metal springs on all axes
 - assembly with only M3-screws and threaded brass inserts
 - support structures rarely required, low part count, easy assemply
 
@@ -38,8 +38,8 @@
 - low cost
 
 #### disadvantages
-- low torque cause of directdrive hub motor (will increase with planetary gear)
-- low torque cause of sensorless ESC (will increase with currentsensing ESC)
+- low torque cause of direct drive hub motor (will increase with planetary gear)
+- low torque cause of sensorless ESC (will increase with current sensing ESC)
 - video stream consumes too much data
 ## get started just write the following ([for detailed info see guide](https://github.com/Open-ATS-Github/Newone/blob/main/002_program/readme.txt)):
 ```
@@ -72,4 +72,4 @@ soc.sendto(b'your message',address_server)
 <img src="https://www.open-ats.eu/3dfiles/print.jpg">
 
 feel free to contact for any problem: info@open-ats.eu, also consider [donating](https://www.open-ats.eu/donate.html) or get a 
-[videocall with devs](https://www.open-ats.eu/contact.html)
+[video call with devs](https://www.open-ats.eu/contact.html)
