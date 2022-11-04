@@ -6,9 +6,9 @@
 [demo video](https://www.youtube.com/watch?v=fuw2pRNdg8U) &nbsp;&nbsp;&nbsp;
 [documentation](https://www.open-ats.eu/docs.html) &nbsp;&nbsp;&nbsp;
 [discord](https://discord.com/channels/995806628077109268/995806628639158344) &nbsp;&nbsp;&nbsp;
-[3D-Model vehicle](https://www.open-ats.eu/3dmodel_main.html) &nbsp;&nbsp;&nbsp;
-[3D-Model electronics](https://www.open-ats.eu/3dmodel_elec.html) &nbsp;&nbsp;&nbsp;
-[3D-Model print](https://www.open-ats.eu/3dmodel_print.html)
+[3D-model vehicle](https://www.open-ats.eu/3dmodel_main.html) &nbsp;&nbsp;&nbsp;
+[3D-model electronics](https://www.open-ats.eu/3dmodel_elec.html) &nbsp;&nbsp;&nbsp;
+[3D-model print](https://www.open-ats.eu/3dmodel_print.html)
 
 ## features:
 #### programs
