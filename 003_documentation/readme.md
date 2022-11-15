@@ -1,1 +1,1 @@
-Unfinished doc: https://www.open-ats.eu/documentation.html
+Unfinished doc: https://www.open-ats.eu/docs.html
