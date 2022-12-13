@@ -48,7 +48,7 @@ leave a star for no reason
 python3 main.py
 ```
 
-## example code:
+## python example code:
 #### take and show webcam/rpi-camera image
 ```
 import cv2
