@@ -3,7 +3,6 @@
 #this is a program for controlling a vehicle over mobile internet (videostream and controlling motors)
 #there are actually 3 programs in this single file for the groundstation, server and vehicle
 
-
 ###short description of the individual subprograms
 
 #controlling ground station: reads the input of the joystick and sends it to the vehicle through the server
@@ -15,14 +14,14 @@
 #controlling vehicle: receiving control data from the ground station through the server and sets the outputs of the pi accordingly
 #vehicle will stop if there is no connection to the ground station
 
-#videostream vehicle: rpi takes picture with open cv, convert it to a jpg file to save traffic and sending
+#videostream vehicle: rpi takes picture with open cv, convert it to a webp file to save traffic and sending
 #it in small junks to the ground station through the server. if video is not watched it's closed to save traffic
 
 #server functions as mittleman,sending everything from the vehicle to the ground station
 #and vice versa,constantly checks for changed ip addresses from the vehicle and ground sation
 
 password = b'rmxmjwby'#for a secure communication, change to your own (for server authentication)
-address_server = ('192.168.1.26',3274)#address server(ip and port), change to your own
+address_server = ('127.0.0.1',3274)#address server(ip and port), change to your own
 print('open-source project by www.OPEN-ATS.eu\nchange to your own IP and password')
 
 import socket,threading,time,sys
@@ -153,15 +152,14 @@ def record_and_send_video():#function, record_and_send_video_stream
   cap.set(cv2.CAP_PROP_FRAME_HEIGHT,180)#image height, dont go higher than 360 it will lag
   cap.set(cv2.CAP_PROP_FPS,          30)#fps
   cnt  =0#image counter
-  tilex=4#count tiles in x (if changes, jpg header needs to change)
-  tiley=2#count tiles in y (if changes, jpg header needs to change)
+  tilex=4#count tiles in x
+  tiley=2#count tiles in y
   previous_img = numpy.empty((2,4,90,80,3),dtype=numpy.uint8) #array for tiles
   
   #function numpy.uint8(x<y) will give 0 or 1 => 1 or 255 
   #def sumabsdiff(img1,img2): return numpy.sum((img1-img2)*(numpy.uint8(img1<img2)*254+1))
   #def brightnessup(img1,img2): return numpy.sum(numpy.uint8(img1>img2)*1)
   #def brightnessdn(img1,img2): return numpy.sum(numpy.uint8(img1<img2)*1)
-  def sumabsdiff(img1,img2): return numpy.sum(numpy.uint8(img1>(img2+2))*(img1-img2)+(numpy.uint8(img2>(img1+2)))*(img2-img1))
   
   def sumabsdiff(img1,img2): return numpy.sum(numpy.uint8(img1>(img2+2))*(img1-img2)+(numpy.uint8(img2>(img1+2)))*(img2-img1))
   
@@ -170,22 +168,21 @@ def record_and_send_video():#function, record_and_send_video_stream
       img=cap.read()[1] #capturing numpy image
       
       #uncomment to save image
-      #cv2.imwrite("images/img"+str(cnt)+".jpg",img)
+      #cv2.imwrite("images/img"+str(cnt)+".webp",img)
       #uncomment to show image
       #cv2.imshow('stream',img) # 1st argument: window title
       #cv2.waitKey(1)
       
-      img=cv2.resize(img,(320,180))# downsize the image for stream, (if resolution is changes jpg header needs to change)
-      img=img.reshape(tiley,int(img.shape[0]/tiley),tilex,int(img.shape[1]/tilex),3).swapaxes(1,2) #convert to blocks, first y, second x
+      img=cv2.resize(img,(320,180))# downsize the image for stream, (if resolution is changes webp header needs to change)
+      img=img.reshape(tiley,int(img.shape[0]/tiley),tilex,int(img.shape[1]/tilex),3).swapaxes(1,2) #convert to blocks, first y, second x, resuolution:80:90
       for id_img_row, img_row in enumerate(img):
         for id_img_tile, img_tile in enumerate(img_row):
           #if brightnessup(previous_img[id_img_row,id_img_tile],img_tile) > 
           if sumabsdiff(previous_img[id_img_row,id_img_tile],img_tile) > 500: # 80*90*3 = 21600 is 1%
             #print(str(id_img_row)+' '+str(id_img_tile)+' '+str(sumabsdiff(previous_img[id_img_row,id_img_tile],img_tile)))
             
-            jpg_image = (cv2.imencode('.jpg',img_tile,[int(cv2.IMWRITE_JPEG_QUALITY),90])[1]) #convert to jpg
-            jpg_body  = jpg_image[623:-2] #remove header and tail
-            udp_packages = numpy.array_split(jpg_body,len(jpg_body)/500+1) #split into 500 byte chunks
+            webp_image = (cv2.imencode('.webp',img_tile,[int(cv2.IMWRITE_WEBP_QUALITY),90])[1]) #convert to webp
+            udp_packages = numpy.array_split(webp_image,len(webp_image)/500+1) #split into 500 byte chunks
             for package in udp_packages:
               
               cnt += 1
@@ -201,27 +198,6 @@ def receive_and_display_video():#receive and display image
   print('waiting for images to be received')
   import cv2,numpy
   
-  jpg_header = bytearray( #jpg header (80:180) which doesnt need to be send every time
-  [255,216,255,224,  0, 16, 74, 70, 73, 70,  0,  1,  1,  0,  0,  1,  0,  1,  0,  0,255,219,  0, 67,  0,  3,  2,  2,  3,  2,  2,  3,  3,  3,  3,  4
-  ,  3,  3,  4,  5,  8,  5,  5,  4,  4,  5, 10,  7,  7,  6,  8, 12, 10, 12, 12, 11, 10, 11, 11, 13, 14, 18, 16, 13, 14, 17, 14, 11, 11, 16, 22, 16
-  , 17, 19, 20, 21, 21, 21, 12, 15, 23, 24, 22, 20, 24, 18, 20, 21, 20,255,219,  0, 67,  1,  3,  4,  4,  5,  4,  5,  9,  5,  5,  9, 20, 13, 11, 13
-  , 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20
-  , 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,255,192,  0, 17,  8,  0, 90,  0, 80,  3,  1, 34,  0,  2, 17,  1,  3, 17,  1,255,196,  0
-  , 31,  0,  0,  1,  5,  1,  1,  1,  1,  1,  1,  0,  0,  0,  0,  0,  0,  0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,255,196,  0,181, 16,  0
-  ,  2,  1,  3,  3,  2,  4,  3,  5,  5,  4,  4,  0,  0,  1,125,  1,  2,  3,  0,  4, 17,  5, 18, 33, 49, 65,  6, 19, 81, 97,  7, 34,113, 20, 50,129
-  ,145,161,  8, 35, 66,177,193, 21, 82,209,240, 36, 51, 98,114,130,  9, 10, 22, 23, 24, 25, 26, 37, 38, 39, 40, 41, 42, 52, 53, 54, 55, 56, 57, 58
-  , 67, 68, 69, 70, 71, 72, 73, 74, 83, 84, 85, 86, 87, 88, 89, 90, 99,100,101,102,103,104,105,106,115,116,117,118,119,120,121,122,131,132,133,134
-  ,135,136,137,138,146,147,148,149,150,151,152,153,154,162,163,164,165,166,167,168,169,170,178,179,180,181,182,183,184,185,186,194,195,196,197,198
-  ,199,200,201,202,210,211,212,213,214,215,216,217,218,225,226,227,228,229,230,231,232,233,234,241,242,243,244,245,246,247,248,249,250,255,196,  0
-  , 31,  1,  0,  3,  1,  1,  1,  1,  1,  1,  1,  1,  1,  0,  0,  0,  0,  0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,255,196,  0,181, 17,  0
-  ,  2,  1,  2,  4,  4,  3,  4,  7,  5,  4,  4,  0,  1,  2,119,  0,  1,  2,  3, 17,  4,  5, 33, 49,  6, 18, 65, 81,  7, 97,113, 19, 34, 50,129,  8
-  , 20, 66,145,161,177,193,  9, 35, 51, 82,240, 21, 98,114,209, 10, 22, 36, 52,225, 37,241, 23, 24, 25, 26, 38, 39, 40, 41, 42, 53, 54, 55, 56, 57
-  , 58, 67, 68, 69, 70, 71, 72, 73, 74, 83, 84, 85, 86, 87, 88, 89, 90, 99,100,101,102,103,104,105,106,115,116,117,118,119,120,121,122,130,131,132
-  ,133,134,135,136,137,138,146,147,148,149,150,151,152,153,154,162,163,164,165,166,167,168,169,170,178,179,180,181,182,183,184,185,186,194,195,196
-  ,197,198,199,200,201,202,210,211,212,213,214,215,216,217,218,226,227,228,229,230,231,232,233,234,242,243,244,245,246,247,248,249,250,255,218,  0
-  , 12,  3,  1,  0,  2, 17,  3, 17,  0, 63,  0])
-  jpg_tail = bytearray([255,217])#jpg tail (320:180) which doesn't need to be send every time to
-  
   img = bytearray()#incoming image data is saved
   np_tile = [numpy.empty((90,80,3),dtype=numpy.uint8)]*8
   pervious_index = 0
@@ -231,17 +207,18 @@ def receive_and_display_video():#receive and display image
     if index < 8:#check for video data
       #print(index)
       if pervious_index != index:#new tile
-        jpg_tile = numpy.frombuffer(jpg_header+img+jpg_tail, dtype=numpy.uint8)#add head, tail
-        #try:#except: pass
-        np_tile[pervious_index] = cv2.imdecode(jpg_tile,cv2.IMREAD_COLOR)#jpg to np
-        if pervious_index > index:#only show pic if all tiles are send 
-          img_t  =numpy.concatenate((np_tile[0:4]),axis=1)#reassemble image together horizontally
-          img_d  =numpy.concatenate((np_tile[4:8]),axis=1)#reassemble image together vertically
-          img_al =numpy.concatenate((img_t,img_d)) #list of numpy arrays into single numpy array
-          img_al =cv2.resize(img_al,(640,360))#upscale the image to get a better view
-          cv2.imshow('videostream Open-ATS',img_al) #first arg is the name of the window; dont displays the picture
-          cv2.waitKey(1)#displays the picture, waits 1ms
-        img = bytearray()
+        webp_tile = numpy.frombuffer(img, dtype=numpy.uint8)#add head, tail
+        try:
+         np_tile[pervious_index] = cv2.imdecode(webp_tile,cv2.IMREAD_COLOR)#webp to np
+         if pervious_index > index:#only show pic if all tiles are send 
+           img_t  =numpy.concatenate((np_tile[0:4]),axis=1)#reassemble image together horizontally
+           img_d  =numpy.concatenate((np_tile[4:8]),axis=1)#reassemble image together vertically
+           img_al =numpy.concatenate((img_t,img_d)) #list of numpy arrays into single numpy array
+           img_al =cv2.resize(img_al,(640,360))#upscale the image to get a better view
+           cv2.imshow('videostream Open-ATS',img_al) #first arg is the name of the window; dont displays the picture
+           cv2.waitKey(1)#displays the picture, waits 1ms
+        except:print('failed');pass;
+        img = bytearray()#reset img for next tile
       pervious_index = index
       img = img + package[1:]
 
@@ -253,14 +230,15 @@ def server(): #relay server
   adr_clt1 = adr_clt2 = ('0.0.0.0',5000)#address clients
   while run:
     msg, adr = soc.recvfrom(1024)#msg: receiving message, adr: incoming address
+    #forward the message to the other client
     if   adr == adr_clt1: soc.sendto(msg, adr_clt2)#;print('1'+str(msg))# for testing #sent msg to other client
     elif adr == adr_clt2: soc.sendto(msg, adr_clt1)#;print('2'+str(msg))# for testing #sent msg to other client
-    elif msg == keep_alive_message +password:#only changing ip if authenticate with password 
+    elif msg == keep_alive_message +password:#check for a keep-alive message with the correct password
       print(datetime.now().strftime("%d/%m/%Y %H:%M:%S")+' new login: '+str(adr))#for differentiating new logins, cause server will run all time
-      adr_clt2 = adr_clt1 #changing to new addresses
+      adr_clt2 = adr_clt1 #update the client addresses
       adr_clt1 = adr
 
-#starting programm, dependents which option was chosen
+#starting programms, dependents which option was chosen
 if option_location    =='1' or option_location =='3':
   threading.Thread(target = sending_keepalive).start()#starting function: keep alive
   if option_location  =='1':#ground station
